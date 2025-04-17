@@ -14,7 +14,7 @@ function App() {
     : null;
 
   return (
-    <div className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center px-4 py-10" style={{ backgroundImage: "url('src/assets/cricket.png')" }}>
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center px-4 py-10" style={{ backgroundImage: "url('./assets/cricket.png')" }}>
   
       <h1 className="text-3xl font-bold mb-6 text-blue-700">🏏 CricMoments 🏏 </h1>
 
