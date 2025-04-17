@@ -19,7 +19,7 @@ const UploadForm: React.FC<Props> = ({ onUploadSuccess }) => {
   const BASE_URL = import.meta.env.VITE_API_URL;
 
   const handleCancel = async () => {
-    await axios.post(`${BASE_URL}:3000/api/cancel`);
+    await axios.post(`${BASE_URL}/api/cancel`);
     setStatus("❌ Cancelled by user");
     setUploading(false);
     setProgress(0);
@@ -44,7 +44,7 @@ const UploadForm: React.FC<Props> = ({ onUploadSuccess }) => {
       setProgress(0);
       setStatus("Processing...");
 
-      const res = await axios.post(`${BASE_URL}:3000/api/upload`, formData, {
+      const res = await axios.post(`${BASE_URL}/api/upload`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
         onUploadProgress: (e) => {
           if (e.total) {

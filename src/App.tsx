@@ -10,7 +10,7 @@ function App() {
   const BASE_URL = import.meta.env.VITE_API_URL;
 
   const videoUrl = mergedVideo
-    ?`${BASE_URL}:3000/merged/${mergedVideo}`
+    ?`${BASE_URL}/merged/${mergedVideo}`
     : null;
 
   return (
@@ -42,7 +42,7 @@ function App() {
     <button
   onClick={async () => {
     try {
-      await axios.post(`${BASE_URL}:3000/api/clear`);
+      await axios.post(`${BASE_URL}/api/clear`);
       setMergedVideo(null);
       setResetSignal((prev) => prev + 1); // trigger reset in UploadForm
       window.scrollTo({ top: 0, behavior: "smooth" });
